@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal Jekyll blog (jekyll-now theme) hosted on GitHub Pages at happyboredom.github.io. The site is rebuilt automatically by GitHub Pages on every push to `master`.
+Personal Jekyll blog (jekyll-now theme) hosted on GitHub Pages at https://happyboredom.github.io. Deployment is automatic — pushing to `master` triggers a GitHub Pages rebuild with no CI step required.
 
 ## Local Development
 
@@ -48,4 +48,4 @@ URLs are generated as `/:title/` (no date in the URL, per `permalink: /:title/` 
 - Disqus comments — set `disqus:` to your shortname
 - Google Analytics — set `google_analytics:` to your tracking code
 
-**Plugins in use:** `jekyll-sitemap`, `jekyll-feed` (generates `/sitemap.xml` and `/feed.xml` automatically).
+**Plugins in use:** `jekyll-sitemap`, `jekyll-feed` (generates `/sitemap.xml` and `/feed.xml` automatically). Both are on the [GitHub Pages whitelist](https://pages.github.com/versions/). Only whitelisted plugins will run on GitHub Pages — adding an unlisted gem in `plugins:` in `_config.yml` will be silently ignored remotely (it may work locally but won't on the live site).
