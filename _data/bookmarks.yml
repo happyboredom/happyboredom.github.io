@@ -1,0 +1,24 @@
+- title: "The Grug Brained Developer"
+  url: "https://grugbrain.dev"
+  domain: "grugbrain.dev"
+  description: "A layman's guide to thinking like the legendary Grug programmer — a defense of simplicity over complexity."
+
+- title: "Choose Boring Technology"
+  url: "https://mcfunley.com/choose-boring-technology"
+  domain: "mcfunley.com"
+  description: "Dan McKinley argues for minimizing the number of new technologies introduced, saving innovation tokens for what actually matters."
+
+- title: "The Forgotten Art of Struct Packing"
+  url: "http://www.catb.org/esr/structure-packing/"
+  domain: "catb.org"
+  description: "Eric Raymond's guide to reducing memory waste by understanding how C structs are laid out."
+
+- title: "Falsehoods Programmers Believe About Names"
+  url: "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/"
+  domain: "kalzumeus.com"
+  description: "Patrick McKenzie lists 40 assumptions about names that turn out to be wrong — a reminder that edge cases are everywhere."
+
+- title: "Reflections on Trusting Trust"
+  url: "https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf"
+  domain: "cs.cmu.edu"
+  description: "Ken Thompson's 1984 Turing Award lecture: a compiler that inserts a backdoor into itself and the programs it compiles."
