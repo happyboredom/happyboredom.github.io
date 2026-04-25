@@ -1,0 +1,20 @@
+---
+layout: default
+title: Editions
+---
+
+<div class="editions-index">
+  <h1>Editions</h1>
+  {% assign sorted_editions = site.editions | sort: 'date' | reverse %}
+  {% for edition in sorted_editions %}
+  <div class="edition-listing">
+    <a href="{{ edition.url }}">
+      <span class="edition-listing-title">{{ edition.title }} Edition</span>
+      <span class="edition-listing-meta">
+        <span class="edition-listing-date">{{ edition.date | date: "%B %e, %Y" }}</span>
+        <span class="edition-listing-count">{{ edition.items | size }} links</span>
+      </span>
+    </a>
+  </div>
+  {% endfor %}
+</div>

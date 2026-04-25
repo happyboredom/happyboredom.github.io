@@ -72,6 +72,11 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
+collections:
+  editions:
+    output: true
+    permalink: /editions/:name/
+
 # Use the following plug-ins
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem

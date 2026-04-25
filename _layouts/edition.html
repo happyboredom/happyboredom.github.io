@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="edition">
+  <header class="edition-header">
+    <h1>{{ page.title }} Edition</h1>
+    <p class="edition-date">{{ page.date | date: "%B %e, %Y" }}</p>
+  </header>
+
+  <div class="edition-items">
+    {% for item in page.items %}
+    <article class="edition-card">
+      {% if item.image %}
+      <a href="{{ item.url }}" class="edition-card-image" target="_blank" rel="noopener">
+        <img src="{{ item.image }}" alt="{{ item.title }}" />
+      </a>
+      {% endif %}
+      <div class="edition-card-body">
+        <span class="edition-card-domain">{{ item.domain }}</span>
+        <h2 class="edition-card-title">
+          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+        </h2>
+        <p class="edition-card-excerpt">{{ item.excerpt }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <p class="edition-back"><a href="{{ site.baseurl }}/editions/">← All editions</a></p>
+</div>
