@@ -9,21 +9,61 @@ layout: default
   </header>
 
   <div class="edition-items">
-    {% for item in page.items %}
-    <article class="edition-card">
-      {% if item.image %}
-      <a href="{{ item.url }}" class="edition-card-image" target="_blank" rel="noopener">
-        <img src="{{ item.image }}" alt="{{ item.title }}" />
-      </a>
+    {% for key in page.items %}
+      {% assign item = site.data.items[key] %}
+      {% if item %}
+        {% if item.layout == 'hero' %}
+
+        <article class="edition-block edition-block--hero">
+          {% if item.image %}
+          <a href="{{ item.url }}" class="edition-block__image" target="_blank" rel="noopener">
+            <img src="{{ item.image }}" alt="{{ item.title }}" />
+          </a>
+          {% endif %}
+          <div class="edition-block__body">
+            <span class="edition-block__domain">{{ item.domain }}</span>
+            <h2 class="edition-block__title">
+              <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+            </h2>
+            <p class="edition-block__excerpt">{{ item.excerpt }}</p>
+          </div>
+        </article>
+
+        {% elsif item.layout == 'image' %}
+
+        <article class="edition-block edition-block--image">
+          {% if item.image %}
+          <a href="{{ item.url }}" class="edition-block__image" target="_blank" rel="noopener">
+            <img src="{{ item.image }}" alt="{{ item.title }}" />
+            <span class="edition-block__caption">
+              <span class="edition-block__domain">{{ item.domain }}</span>
+              <span class="edition-block__title">{{ item.title }}</span>
+            </span>
+          </a>
+          {% endif %}
+        </article>
+
+        {% else %}
+
+        <article class="edition-block edition-block--article">
+          <div class="edition-block__inner">
+            {% if item.image %}
+            <a href="{{ item.url }}" class="edition-block__image" target="_blank" rel="noopener">
+              <img src="{{ item.image }}" alt="{{ item.title }}" />
+            </a>
+            {% endif %}
+            <div class="edition-block__body">
+              <span class="edition-block__domain">{{ item.domain }}</span>
+              <h2 class="edition-block__title">
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+              </h2>
+              <p class="edition-block__excerpt">{{ item.excerpt }}</p>
+            </div>
+          </div>
+        </article>
+
+        {% endif %}
       {% endif %}
-      <div class="edition-card-body">
-        <span class="edition-card-domain">{{ item.domain }}</span>
-        <h2 class="edition-card-title">
-          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
-        </h2>
-        <p class="edition-card-excerpt">{{ item.excerpt }}</p>
-      </div>
-    </article>
     {% endfor %}
   </div>
 
