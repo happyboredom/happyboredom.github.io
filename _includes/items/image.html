@@ -1,0 +1,11 @@
+<article class="edition-block edition-block--image">
+  {% if include.item.image %}
+  <a href="{{ include.item.url }}" class="edition-block__image" target="_blank" rel="noopener">
+    <img src="{{ include.item.image }}" alt="{{ include.item.title }}" />
+    <span class="edition-block__caption">
+      <span class="edition-block__domain">{{ include.item.domain }}</span>
+      <span class="edition-block__title">{{ include.item.title }}</span>
+    </span>
+  </a>
+  {% endif %}
+</article>

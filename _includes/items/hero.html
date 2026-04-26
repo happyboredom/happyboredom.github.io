@@ -1,0 +1,14 @@
+<article class="edition-block edition-block--hero">
+  {% if include.item.image %}
+  <a href="{{ include.item.url }}" class="edition-block__image" target="_blank" rel="noopener">
+    <img src="{{ include.item.image }}" alt="{{ include.item.title }}" />
+  </a>
+  {% endif %}
+  <div class="edition-block__body">
+    <span class="edition-block__domain">{{ include.item.domain }}</span>
+    <h2 class="edition-block__title">
+      <a href="{{ include.item.url }}" target="_blank" rel="noopener">{{ include.item.title }}</a>
+    </h2>
+    <p class="edition-block__excerpt">{{ include.item.excerpt }}</p>
+  </div>
+</article>
