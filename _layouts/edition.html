@@ -10,7 +10,7 @@ layout: default
 
   <div class="edition-items">
     {% for key in page.items %}
-      {% assign item = site.data.items[key] %}
+      {% assign item = site.data.editions[page.slug][key] %}
       {% if item %}
         {% assign item_template = item.layout | prepend: "items/" | append: ".html" %}
         {% include {{ item_template }} item=item %}
